@@ -65,8 +65,6 @@ export default class NewsContainer extends Component {
       articles: parsedData.articles,
       loading: false
     })
-    // let btn = document.getElementById('nextBtn');
-    // btn.removeAttribute("disabled")
 
   }
 
@@ -84,6 +82,7 @@ export default class NewsContainer extends Component {
         </div>
         <div className=" d-flex justify-content-between">
           <button disabled={this.state.page <= 1} className='preBtn btn btn-sm btn-primary' id='preBtn' onClick={this.prePage}> previous</button>
+          
           <button disabled={this.state.page === Math.ceil(this.state.totalresult / 6)} className='nextBtn  btn btn-sm btn-primary' id='nextBtn' onClick={this.nextPage}>Next</button>
         </div>
       </div>
